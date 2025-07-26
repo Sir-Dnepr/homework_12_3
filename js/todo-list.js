@@ -8,6 +8,7 @@ const getDataFromFormTarget = (target) => {
    let taskText = null;
    if (target) {
       const formData = new FormData(target);
+      target.reset();
       const inputTextValue = formData.get(NEW_TASK_INPUT_TEXT_NAME);
       taskText = inputTextValue?.trim();
    }
